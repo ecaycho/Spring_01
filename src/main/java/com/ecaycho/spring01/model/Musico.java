@@ -35,6 +35,11 @@ public class Musico extends Persona{
     public Musico(int cancionesConocidas) {
         this.cancionesConocidas = cancionesConocidas;
     }
+
+    public Musico(int cancionesConocidas, Instrumento instrumento) {
+        this.cancionesConocidas = cancionesConocidas;
+        this.instrumento = instrumento;
+    }
     
     
 }

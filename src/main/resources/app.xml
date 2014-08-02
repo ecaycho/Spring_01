@@ -15,4 +15,13 @@
         <constructor-arg value="1500"/>
     </bean>
     
+    <!-- Referencia en Constructor Paso 4 -->
+    <bean id="instrumento" class="com.ecaycho.spring01.model.Instrumento">
+        <property name="marca" value="Fender" />
+    </bean>
+    
+    <bean id="slash" class="com.ecaycho.spring01.model.Musico">
+        <constructor-arg value="5" />
+        <constructor-arg ref="instrumento"/>
+    </bean>
 </beans>

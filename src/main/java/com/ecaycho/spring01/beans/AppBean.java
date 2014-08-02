@@ -8,7 +8,15 @@ public class AppBean {
     
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("app.xml");
-        AppBean.valoresConstructor(ctx);
+        //AppBean.valoresConstructor(ctx);
+        AppBean.referenciaConstructor(ctx);
+    }
+    
+    public static void referenciaConstructor(ApplicationContext ctx) {
+        Musico m = (Musico) ctx.getBean("slash");
+        
+        System.out.println("Marca del Instrumento: " + m.getInstrumento().getMarca());
+        System.out.println("Numero de canciones: " + m.getCancionesConocidas());
     }
     
     public static void valoresConstructor(ApplicationContext ctx) {
