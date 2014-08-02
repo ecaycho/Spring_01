@@ -8,7 +8,10 @@
         <property name="apellido" value="Caycho Ponce" />
     </bean>
     
+    <!-- Valores Constructor -->
     <bean id="musico" class="com.ecaycho.spring01.model.Musico">
+        <property name="nombre" value="Erick Antonio" />
+        <property name="apellido" value="Caycho Ponce" />
         <constructor-arg value="1500"/>
     </bean>
     
