@@ -7,4 +7,9 @@
         <property name="nombre" value="Erick Antonio" />
         <property name="apellido" value="Caycho Ponce" />
     </bean>
+    
+    <bean id="musico" class="com.ecaycho.spring01.model.Musico">
+        <constructor-arg value="1500"/>
+    </bean>
+    
 </beans>
