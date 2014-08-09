@@ -6,7 +6,8 @@
 
 package com.ecaycho.spring01.jdbc;
 
-import com.ecaycho.spring01.jdbc.dao.programaDAO;
+import com.ecaycho.spring01.jdbc.dao.ProgramaDAO;
+import com.ecaycho.spring01.jdbc.dao.ProgramaRM;
 import com.ecaycho.spring01.jdbc.model.Programa;
 import java.util.List;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
@@ -15,10 +16,12 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
  *
  * @author ecaycho
  */
-public class ProgramaDAOJ extends JdbcDaoSupport implements programaDAO{
+public class ProgramaDAOJ extends JdbcDaoSupport implements ProgramaDAO{
 
     public List<Programa> todo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "select * from programa";
+        return this.getJdbcTemplate().query(sql,new ProgramaRM());
+        
     }
 
     public Programa encontrar(Long id) {
