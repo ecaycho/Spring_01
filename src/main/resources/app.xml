@@ -17,11 +17,72 @@
     
     <!-- Referencia en Constructor Paso 4 -->
     <bean id="instrumento" class="com.ecaycho.spring01.model.Instrumento">
+        <property name="nombre" value="Instrumento 007" />
         <property name="marca" value="Fender" />
     </bean>
     
     <bean id="slash" class="com.ecaycho.spring01.model.Musico">
+        <!--
         <constructor-arg value="5" />
+        -->
         <constructor-arg ref="instrumento"/>
     </bean>
+    
+    <!-- Valores a través de Setters -->
+    <bean id="paul" class="com.ecaycho.spring01.model.Musico" >
+        <property name="nombre" value="Paul"/>
+        <property name="apellido" value="Mc"/>
+    <!-- Valores a través de Referencia-->        
+        <property name="instrumento" ref="instrumento"/>
+    </bean>
+    
+    <!-- Inyección beans de forma interna -->
+    <bean id="musico_07"  class="com.ecaycho.spring01.model.Musico">
+        <property name="nombre" value="Ringo - musico 07"/>
+        <property name="apellido" value="Start"/>
+        
+        <property name="instrumento">
+            <bean class="com.ecaycho.spring01.model.Guitarra">
+                <property name="marca" value="Assu Guitar Hero!!!!" />
+            </bean>
+        </property>
+    </bean>
+    
+    <!-- Inyeccion de Collecciones -->
+    <bean id="guitarra" class="com.ecaycho.spring01.model.Guitarra">
+        <property name="nombre" value="guitarra 01" />
+        <property name="marca" value=" g01 - fender" />
+    </bean>
+    <bean id="piano" class="com.ecaycho.spring01.model.Piano">
+        <property name="nombre" value="piano 01" />
+        <property name="marca" value="p01 - pianini" />
+    </bean>
+    <bean id="musico_08" class="com.ecaycho.spring01.model.Musico">
+        <property name="instrumentos">
+            <list>
+                <ref bean="guitarra"/>
+                <ref bean="piano"/>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- referencia autómatica por nombre-->
+    <bean id="musico_10" class="com.ecaycho.spring01.model.Musico" autowire="byName" />
+    
+    <!-- referencia autómatica por tipo 
+        Se ha agregado otro tipo Instrumento pero con la opción PRIMARY 
+        para que sea considerado P1 por el bean.
+    -->
+    <bean id="bajo" class="com.ecaycho.spring01.model.Instrumento" primary="true">
+        <property name="marca" value="Bajo - ejemplo 11" />
+    </bean>
+    <bean id="musico_11" class="com.ecaycho.spring01.model.Musico" autowire="byType" />
+     
+    <!-- referencia automatica por constructor --> 
+    <bean id="musico_12" class="com.ecaycho.spring01.model.Musico" autowire="constructor" />
+    
+    <!-- referencia automatica - autodetected (default) -->
+    <bean id="musico_13" class="com.ecaycho.spring01.model.Musico" autowire="default" />
+    
+    
 </beans>

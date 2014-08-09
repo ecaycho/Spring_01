@@ -36,10 +36,19 @@ public class Musico extends Persona{
         this.cancionesConocidas = cancionesConocidas;
     }
 
+    /*
+    -Se comentó para hacer el autowire por constructor (ejercicio 12)
+    
     public Musico(int cancionesConocidas, Instrumento instrumento) {
         this.cancionesConocidas = cancionesConocidas;
         this.instrumento = instrumento;
     }
+    */
     
+    public Musico(Instrumento instrumento) {
+        this.instrumento = instrumento;
+    }
     
+    public Musico(){
+    }
 }

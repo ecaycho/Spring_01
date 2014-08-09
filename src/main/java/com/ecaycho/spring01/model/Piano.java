@@ -8,6 +8,6 @@ package com.ecaycho.spring01.model;
  *
  * @author SABADO-TARDE
  */
-public class Piano {
-    
+public class Piano extends Instrumento{
+  
 }

@@ -8,6 +8,6 @@ package com.ecaycho.spring01.model;
  *
  * @author SABADO-TARDE
  */
-public class Guitarra {
+public class Guitarra extends Instrumento{
     
 }
