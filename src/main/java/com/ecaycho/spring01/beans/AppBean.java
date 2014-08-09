@@ -2,8 +2,6 @@ package com.ecaycho.spring01.beans;
 
 import com.ecaycho.spring01.beans.model.Instrumento;
 import com.ecaycho.spring01.beans.model.Musico;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

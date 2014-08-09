@@ -26,7 +26,11 @@ public class ProgramaDAOJ extends JdbcDaoSupport implements ProgramaDAO{
     }
 
     public Programa encontrar(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        String sql="select * from programa where id = ?";
+        
+        
+        return null;
     }
 
     public void guardar(Programa programa) {
