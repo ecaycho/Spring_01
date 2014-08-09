@@ -1,7 +1,7 @@
 package com.ecaycho.spring01.beans;
 
-import com.ecaycho.spring01.model.Instrumento;
-import com.ecaycho.spring01.model.Musico;
+import com.ecaycho.spring01.beans.model.Instrumento;
+import com.ecaycho.spring01.beans.model.Musico;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

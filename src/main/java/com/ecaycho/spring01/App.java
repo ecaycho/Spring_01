@@ -1,6 +1,6 @@
 package com.ecaycho.spring01;
 
-import com.ecaycho.spring01.model.Persona;
+import com.ecaycho.spring01.beans.model.Persona;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

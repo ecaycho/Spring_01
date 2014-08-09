@@ -1,4 +1,4 @@
-package com.ecaycho.spring01.model;
+package com.ecaycho.spring01.beans.model;
 
 public class Instrumento {
 
