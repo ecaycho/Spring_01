@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.RowMapper;
  *
  * @author ecaycho
  */
-public class programaRM implements RowMapper<Programa>{
+public class ProgramaRM implements RowMapper<Programa>{
 
     public Programa mapRow(ResultSet rs, int i) throws SQLException {
         

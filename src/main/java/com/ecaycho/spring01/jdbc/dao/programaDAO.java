@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author ecaycho
  */
-public interface programaDAO {
+public interface ProgramaDAO {
     List<Programa> todo();
     Programa encontrar(Long id);
     void guardar(Programa programa);
