@@ -14,9 +14,9 @@ public class ProgramaRM implements RowMapper<Programa>{
     public Programa mapRow(ResultSet rs, int i) throws SQLException {
         
         Programa p = new Programa();
-        p.setId(rs.getLong(0));
-        p.setNombre(rs.getString(1));
-        p.setDescripcion(rs.getString(2));
+        p.setId(rs.getLong(1));
+        p.setNombre(rs.getString(2));
+        p.setDescripcion(rs.getString(3));
         
         return p;
         
